@@ -6,15 +6,19 @@ class Perceptron:
 		self.lr = learning_rate
 		self.n_iters = n_iters
 		self.activation_function = self._unit_step_function
+		#weights: w1, w2....
 		self.weights = None
+		#wo ~ bias
 		self.bias = None
 
+		#training sample: X, training label: y
 	def fit(self, X, y):
 		#shape: kích thức của mảng
+		#ma trận X size M x n với M là hàng, với số lượng sample, n là cột, với số lượng feature 
 		n_sample, n_features = X.shape
 
 		#init weights
-		#tạo một numpy với tất cả phần tử là 0
+		#tạo một numpy với tất cả phần tử là 0, ở đây số lượng w = với số feature ~ số trục x1 x2 x3...
 		self.weights = np.zeros(n_features)
 		self.bias = 0 
 
@@ -35,12 +39,15 @@ class Perceptron:
 
 
 	def predict(self, X):
+		#đầu tiên thực hiện hàm tuyến tính f(w,x) = (w^T*x +bias)
 		linear_output = np.dot(X, self.weights) + self.bias
+		#tiếp theo thực hiện hàm output là activate function(linear function)
 		y_predicted = self.activation_function(linear_output)
 		return y_predicted	
 
 
 
 	def _unit_step_function(self, x):
+		#xét toàn bộ mảng x nếu có giá trị lớn hơn 0, true thì trả về 1 và false thì trả về 0 (step fucntion)
 		return np.where(x >= 0, 1, 0)
 
