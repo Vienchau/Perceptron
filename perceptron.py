@@ -8,7 +8,7 @@ class Perceptron:
 		self.activation_function = self._unit_step_function
 		#weights: w1, w2....
 		self.weights = None
-		#wo ~ bias
+		#w0 ~ bias
 		self.bias = None
 
 		#training sample: X, training label: y
