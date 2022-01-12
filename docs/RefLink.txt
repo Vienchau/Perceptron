@@ -1,2 +1,12 @@
+Perceptron in Python:
+https://www.youtube.com/watch?v=t2ym2a3pb_Y
+
+Numpy in Python:
+https://codelearn.io/sharing/tim-hieu-thu-vien-numpy-trong-python
+
 datasets.make_blobs():
 https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_blobs.html
+
+3D plot:
+https://likegeeks.com/3d-plotting-in-python/
+https://matplotlib.org/2.0.2/mpl_toolkits/mplot3d/tutorial.html
